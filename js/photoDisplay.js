@@ -34,12 +34,11 @@ var photoSet = [],
 })();
 
 function showLightBox(index) {
-	//maybe need to use indexOf to find index == photo obj imageIndex
 
 	lightBox.setPhotoData(photoSet[index]);
 	document.querySelector('.lightBox .lightBoxImage').innerHTML = lightBox.constructLightBoxElem();
 
-	//if lightbox is already open don't apply the 'show' class again
+	//if lightbox needs to be shown
 	if(!document.querySelector('.lightBox').classList.contains('show')) {
 		document.querySelector('.lightBox').className += ' show';
 	}
