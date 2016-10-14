@@ -1,1 +1,30 @@
-<div>Hello</div>
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Slack Photo App</title>
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+</head>
+<body>
+	<div class="container">
+		<div class="flickrImageError"></div>
+		<div class="flickrImage"></div>
+		<div class="lightBox">
+	        <div class="overlay" onclick="closeLightBox()"></div>
+	        <div class="lightBoxContent"> 
+	        	<a class="close" onclick="closeLightBox()">
+	        		<span class="closeText">x</span>
+	        	</a>
+	        	<a class="move prev" onclick="prevLightBoxImage()"><</a>           
+	            <div class="lightBoxImage"></div>
+	            <a class="move next" onclick="nextLightBoxImage()">></a>
+	        </div>
+	    </div>
+	</div>
+	<script src="js/photoService.js"></script>
+	<script src="js/photoData.js"></script>
+	<script src="js/photoTest.js"></script>
+	<script src="js/photoDisplay.js"></script>
+</body>
+</html>

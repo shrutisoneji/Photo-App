@@ -1,0 +1,108 @@
+/*
+    Stylesheet for Flickr Image LightBox App.
+*/
+html, body {
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    font-family: "Courier New";
+}
+div {
+    position: relative;
+}
+
+/* Flickr Image Styles */
+.flickrImageError {
+    display: none;
+    color: darkred;
+    padding: 20px;
+    font-size: 20px;
+}
+.flickrImageError.show {
+    display: block;
+}
+.flickrImage img {
+    height: 150px;
+    border: 3px solid white;
+    box-shadow: 0px 0px 8px rgba(0,0,0,.3);
+    /*box-shadow: 0px 0px 8px #000;*/
+    margin: 20px;
+}
+.flickrImage img:hover {
+    cursor: pointer;
+}
+
+/* LightBox Styles*/
+.lightBox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%; 
+    width: 100%;
+    text-align: center;
+}
+.lightBox.show {
+    display: block;
+}
+.lightBox .overlay {
+    background-color: black;
+    position: absolute;
+    opacity: 0.8;
+    width: 100%;
+    height: 100%;
+}
+.lightBox .lightBoxContent {
+    display: inline-block;
+    top: 15%;
+    padding: 15px 20px;
+    background-color: black;
+}
+.lightBox .lightBoxContent .close {
+    padding: 7px;
+    font-size: 16px;
+    color: white;
+    position: absolute;
+    font-weight: 300;
+    top: 0;
+    right: 0;
+}
+.lightBox .lightBoxContent .close:hover {
+    cursor: pointer;
+}
+.lightBox .lightBoxContent .move {
+    color: white;
+    font-size: 24px;
+    font-weight: 300;
+    display: block;
+    position: absolute;
+    top: 45%;
+    z-index: 10;
+    padding: 10px;
+}
+.lightBox .lightBoxContent .move.prev {
+    left: 0;
+}
+.lightBox .lightBoxContent .move.next {
+    right: 0;
+}
+.lightBox .lightBoxContent .move.hide {
+    display: none;
+}
+.lightBox .lightBoxContent .move:hover {
+    cursor: pointer;
+}
+.lightBox .lightBoxContent .lightBoxImage {
+    padding: 0 40px;
+}
+.lightBox .lightBoxContent .lightBoxImage img {
+    width: 300px;
+    border: 3px solid white;
+    box-shadow: 0px 0px 8px rgba(0,0,0,.3);
+}
+.lightBox .lightBoxContent .lightBoxImage .lightBoxImageTitle {
+    font-size: 25px;
+    padding: 0 10px;
+    color: white;
+    margin-bottom: 10px;
+}
